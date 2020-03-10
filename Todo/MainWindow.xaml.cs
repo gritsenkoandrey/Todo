@@ -32,9 +32,34 @@ namespace Todo
             _todoData = new BindingList<TodoModel>()
             {
                 new TodoModel(){ Text = "Пример 1"},
-                new TodoModel(){ Text = "Пример 2"}
+                new TodoModel(){ Text = "Пример 2"},
+                new TodoModel(){ Text = "Пример 3", IsDone = true}
             };
             dgTodoList.ItemsSource = _todoData;
+            _todoData.ListChanged += _todoData_ListChanged;
+        }
+
+        private void _todoData_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            switch (e.ListChangedType)
+            {
+                case ListChangedType.ItemAdded:
+                    break;
+                case ListChangedType.ItemChanged:
+                    break;
+                case ListChangedType.ItemDeleted:
+                    break;
+                case ListChangedType.ItemMoved:
+                    break;
+                case ListChangedType.Reset:
+                    break;
+                case ListChangedType.PropertyDescriptorAdded:
+                    break;
+                case ListChangedType.PropertyDescriptorChanged:
+                    break;
+                case ListChangedType.PropertyDescriptorDeleted:
+                    break;
+            }
         }
     }
 }
