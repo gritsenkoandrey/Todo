@@ -10,7 +10,7 @@
         <DataGrid x:Name="dgTodoList" FontSize="16" FontWeight="Bold" Margin="10" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path = CreationDateTime}" IsReadOnly="True" Header="CreationDate" Width="180"></DataGridTextColumn>
-                <DataGridCheckBoxColumn Binding="{Binding Path = IsDone}" IsReadOnly="FalseB" Header="Done" Width="80"></DataGridCheckBoxColumn>
+                <DataGridCheckBoxColumn Binding="{Binding Path = IsDone}" IsReadOnly="False" Header="Done" Width="80"></DataGridCheckBoxColumn>
                 <DataGridTextColumn Binding="{Binding Path = Text}" IsReadOnly="False" Header="Todo" Width="*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
