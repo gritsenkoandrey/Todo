@@ -16,7 +16,7 @@ namespace Todo.Models
             get { return _isDone;}
             set { _isDone = value; }
         }
-        public bool Text
+        public string Text
         {
             get { return _text; }
             set { _text = value; }
