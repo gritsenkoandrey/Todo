@@ -41,24 +41,10 @@ namespace Todo
 
         private void _todoData_ListChanged(object sender, ListChangedEventArgs e)
         {
-            switch (e.ListChangedType)
+            if (e.ListChangedType == ListChangedType.ItemAdded || e.ListChangedType == ListChangedType.ItemDeleted ||
+                e.ListChangedType == ListChangedType.ItemChanged)
             {
-                case ListChangedType.ItemAdded:
-                    break;
-                case ListChangedType.ItemChanged:
-                    break;
-                case ListChangedType.ItemDeleted:
-                    break;
-                case ListChangedType.ItemMoved:
-                    break;
-                case ListChangedType.Reset:
-                    break;
-                case ListChangedType.PropertyDescriptorAdded:
-                    break;
-                case ListChangedType.PropertyDescriptorChanged:
-                    break;
-                case ListChangedType.PropertyDescriptorDeleted:
-                    break;
+
             }
         }
     }
