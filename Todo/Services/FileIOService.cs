@@ -32,7 +32,7 @@ namespace Todo.Services
                 return JsonConvert.DeserializeObject<BindingList<TodoModel>>(fileText);
             }
         }
-        public void SaveData(BindingList<TodoModel> todoData) // метод сохранения в файл
+        public void SaveData(object todoData) // метод сохранения в файл
         {
             using (StreamWriter writer = File.CreateText(Path))
             {
